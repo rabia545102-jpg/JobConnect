@@ -52,13 +52,21 @@ function applyJob() {
     alert("Application submitted successfully!");
 }
 
-function saveJob() {
+function saveJob(){
+
     let title = document.getElementById("jobTitle").innerText;
     let company = document.getElementById("company").innerText;
 
-    localStorage.setItem("savedJob", title + " - " + company);
+    let job = title + " - " + company;
+
+    let savedJobs = JSON.parse(localStorage.getItem("savedJobs")) || [];
+
+    savedJobs.push(job);
+
+    localStorage.setItem("savedJobs", JSON.stringify(savedJobs));
 
     alert("Job saved successfully!");
+
 }
 
 </script>
@@ -66,4 +74,3 @@ function saveJob() {
 </body>
 </html>
 
-</html>
