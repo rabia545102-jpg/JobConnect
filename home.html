@@ -24,6 +24,7 @@
 Search Jobs
 </button>
 
+
 <div class="job-card">
 <h4>Software Developer</h4>
 <p>Company: ABC Technologies</p>
@@ -33,6 +34,7 @@ Search Jobs
 View Details
 </button>
 </div>
+
 
 <div class="job-card">
 <h4>Web Designer</h4>
@@ -44,11 +46,13 @@ View Details
 </button>
 </div>
 
+
 <hr>
 
 <h3>Menu</h3>
 
-<button class="btn" onclick="window.location.href='saved-jobs.html'">
+
+<button class="btn" onclick="window.location.href='Saved-jobs.html'">
 Saved Jobs
 </button>
 
@@ -57,23 +61,27 @@ Saved Jobs
 My Profile
 </button>
 
+
 <button class="btn" onclick="logout()">
 Logout
 </button>
 
+
 </div>
+
 
 <script>
 
 function viewJob(title,company,location){
 
-localStorage.setItem("jobTitle",title);
-localStorage.setItem("jobCompany",company);
-localStorage.setItem("jobLocation",location);
+localStorage.setItem("jobTitle", title);
+localStorage.setItem("jobCompany", company);
+localStorage.setItem("jobLocation", location);
 
 window.location.href="job-details.html";
 
 }
+
 
 function logout(){
 
