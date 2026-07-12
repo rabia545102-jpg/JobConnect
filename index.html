@@ -88,12 +88,18 @@ let jobs = {
 };
 
 let jobList = document.getElementById("jobList");
+let links = {
+    "Frontend Developer - Infosys": "infosys.html",
+    "Web Developer - TCS": "tcs.html",
+    "UI Developer - Wipro": "wipro.html"
+};
 
 jobs[category].forEach(function(job){
     let li = document.createElement("li");
-    li.innerHTML = job;
+    li.innerHTML = `<a href="${links[job]}">${job}</a>`;
     jobList.appendChild(li);
 });
+
 
 function analyzeResume(){
     let fileInput = document.getElementById("resume");
