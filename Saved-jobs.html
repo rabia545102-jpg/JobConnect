@@ -9,23 +9,21 @@
 <body>
 
 <div class="header">
-    JobConnect
+    <h1>JobConnect</h1>
 </div>
 
-<div class="container">function saveJob() {
-    alert("Job saved successfully!");
-}
+<div class="container">
 
     <h2>Saved Jobs</h2>
 
     <div class="job-card">
         <h3 id="savedJobTitle">No Saved Jobs</h3>
 
-        <button class="btn" onclick="window.location.href='job-details.html'">
+        <button class="btn" onclick="viewJob()">
             View Details
         </button>
 
-        <button class="btn" onclick="localStorage.removeItem('savedJob'); location.reload();">
+        <button class="btn" onclick="removeJob()">
             Remove
         </button>
     </div>
@@ -37,14 +35,46 @@
     </button>
 
 </div>
+
 <script>
+
 let savedJob = localStorage.getItem("savedJob");
 
-if (savedJob) {
+if(savedJob){
     document.getElementById("savedJobTitle").innerHTML = savedJob;
-} else {
+}
+else{
     document.getElementById("savedJobTitle").innerHTML = "No Saved Jobs";
 }
+
+function viewJob(){
+
+    if(localStorage.getItem("savedJob")){
+        window.location.href="job-details.html";
+    }
+    else{
+        alert("No saved jobs available.");
+    }
+
+}
+
+function removeJob(){
+
+    if(localStorage.getItem("savedJob")){
+
+        localStorage.removeItem("savedJob");
+        document.getElementById("savedJobTitle").innerHTML="No Saved Jobs";
+        alert("Job removed successfully!");
+
+    }
+    else{
+
+        alert("No saved jobs to remove.");
+
+    }
+
+}
+
 </script>
 
 </body>
