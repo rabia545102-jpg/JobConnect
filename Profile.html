@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile - JobConnect</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="header">
+        <h2>JobConnect</h2>
+    </div>
+
+    <div class="container">
+
+        <h2>My Profile</h2>
+
+        <label>Full Name</label>
+<input type="text" id="fullName" placeholder="Enter Full Name" readonly>
+
+<input type="email" id="profileEmail" placeholder="Enter Email" readonly>
+        <label>Phone Number</label>
+        <input type="tel" id="phone" placeholder="Enter Phone Number">
+
+        <label>Qualification</label>
+        <input type="text" id="qualification" placeholder="B.Tech">
+
+        <label>Skills</label>
+        <textarea id="skills" rows="4" placeholder="Enter your skills"></textarea>
+
+        <label>Upload Resume</label>
+        <input type="file" id="resume">
+
+        <br><br>
+
+        <button class="btn" onclick="saveProfile()">
+            Save Profile
+        </button>
+
+        <button class="btn" onclick="logout()">
+            Logout
+        </button>
+
+        <br><br>
+
+        <button class="btn" onclick="window.location.href='home.html'">
+            Back to Home
+        </button>
+
+    </div>
+    <script src="script.js"></script>
+
+</body>
+</html>

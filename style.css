@@ -1,0 +1,91 @@
+/* JobConnect Professional Style */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #f4f7fc;
+}
+
+.header {
+    background: #1565c0;
+    color: white;
+    text-align: center;
+    padding: 18px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.container {
+    width: 90%;
+    max-width: 500px;
+    margin: 20px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+h2, h3 {
+    color: #1565c0;
+    margin-bottom: 15px;
+}
+
+p {
+    margin-bottom: 10px;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+.btn {
+    width: 100%;
+    padding: 12px;
+    margin-top: 12px;
+    background: #1565c0;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: #0d47a1;
+}
+
+.job-card {
+    background: #f9f9f9;
+    border-left: 5px solid #1565c0;
+    padding: 15px;
+    margin-top: 15px;
+    border-radius: 8px;
+}
+
+label {
+    font-weight: bold;
+    display: block;
+    margin-top: 10px;
+}
+
+a {
+    color: #1565c0;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Jobs - JobConnect</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="header">
+    JobConnect
+</div>
+
+<div class="container">
+
+    <h2>Search Jobs</h2>
+<input type="text" id="jobTitle" placeholder="Job Title">
+
+<input type="text" id="jobLocation" placeholder="Location">
+
+    <select>
+        <option>Select Experience</option>
+        <option>Fresher</option>
+        <option>1-2 Years</option>
+        <option>3-5 Years</option>
+        <option>5+ Years</option>
+    </select>
+
+    <button class="btn" onclick="searchJobs()">Search</button>
+
+    <h3>Search Results</h3>
+
+    <div class="job-card">
+        <h4>Frontend Developer</h4>
+        <p>Company: TechSoft Pvt Ltd</p>
+        <p>Location: Hyderabad</p>
+        <p>Salary: ₹6 LPA</p>
+
+        <button class="btn"
+        onclick="window.location.href='Job-details.html'">
+            View Details
+        </button>
+    </div>
+
+    <br>
+
+    <button class="btn"
+    onclick="window.location.href='home.html'">
+        Back to Home
+    </button>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saved Jobs - JobConnect</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="header">
+    JobConnect
+</div>
+
+<div class="container">
+
+    <h2>Saved Jobs</h2>
+
+    <div class="job-card">
+        <h3 id="savedJobTitle">No Saved Jobs</h3>
+
+        <button class="btn" onclick="window.location.href='Job-details.html'">
+            View Details
+        </button>
+
+        <button class="btn" onclick="localStorage.removeItem('savedJob'); location.reload();">
+            Remove
+        </button>
+    </div>
+
+    <br>
+
+    <button class="btn" onclick="window.location.href='home.html'">
+        Back to Home
+    </button>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
