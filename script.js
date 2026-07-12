@@ -46,3 +46,19 @@ function applyJob() {
 function saveJob() {
     alert("Job saved successfully!");
 }
+function saveProfile() {
+
+    let name = document.getElementById("fullName").value.trim();
+    let email = document.getElementById("profileEmail").value.trim();
+    let phone = document.getElementById("phone").value.trim();
+    let qualification = document.getElementById("qualification").value.trim();
+    let skills = document.getElementById("skills").value.trim();
+
+    localStorage.setItem("name", name);
+    localStorage.setItem("email", email);
+    localStorage.setItem("phone", phone);
+    localStorage.setItem("qualification", qualification);
+    localStorage.setItem("skills", skills);
+
+    alert("Profile Saved Successfully!");
+}
