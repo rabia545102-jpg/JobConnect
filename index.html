@@ -63,7 +63,7 @@ JobConnect
 <input type="password" id="password" placeholder="Password">
 
 <button  onclick="login()">Login</button>
-<p><a href="Signup.html">
+
 <h3>Recommended Jobs</h3>
 
 <ul id="jobList"></ul>
@@ -88,14 +88,17 @@ let jobs = {
 };
 
 let jobList = document.getElementById("jobList");
+
 let links = {
     "Frontend Developer - Infosys": "infosys.html",
     "Web Developer - TCS": "tcs.html",
     "UI Developer - Wipro": "wipro.html"
-
+};
+jobs[category].forEach(function(job){
+    let li = document.createElement("li");
+    li.innerHTML = `<a href="${links[job]}">${job}</a>`;
+    jobList.appendChild(li);
 });
-
-
 function analyzeResume(){
     let fileInput = document.getElementById("resume");
     if(!fileInput || fileInput.files.length === 0){
