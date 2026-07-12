@@ -1,0 +1,9 @@
+Title,Company,Skills,Description
+Python Developer,TCS,"Python, Flask, SQL","Develop backend applications using Flask and SQL."
+Web Developer,Infosys,"HTML, CSS, JavaScript","Develop responsive web applications."
+Data Analyst,Wipro,"Python, Excel, SQL, Power BI","Analyze and visualize business data."
+Java Developer,Accenture,"Java, Spring Boot, MySQL","Develop enterprise Java applications."
+Machine Learning Engineer,Cognizant,"Python, Machine Learning, TensorFlow","Develop machine learning models."
+Software Engineer,Capgemini,"C++, Java, Data Structures","Software development and testing."
+Frontend Developer,HCL,"HTML, CSS, JavaScript, React","Build attractive user interfaces."
+Backend Developer,IBM,"Python, Flask, MongoDB","Develop backend APIs."

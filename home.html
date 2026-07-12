@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - JobConnect</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="header">
+        <h2>JobConnect</h2>
+    </div>
+
+    <div class="container">
+
+        <h2>Welcome to JobConnect</h2>
+        <p>Find your dream job today!</p>
+
+        <input type="text" placeholder="Search for jobs...">
+
+        <button class="btn" onclick="window.location.href='search.html'">
+            Search Jobs
+        </button>
+
+        <h3>Featured Jobs</h3>
+
+        <div class="job-card">
+            <h4>Software Developer</h4>
+            <p>Company: ABC Technologies</p>
+            <p>Location: Hyderabad</p>
+
+            <button class="btn"
+                onclick="window.location.href='Job-details.html'">
+                View Details
+            </button>
+        </div>
+
+        <div class="job-card">
+            <h4>Web Designer</h4>
+            <p>Company: XYZ Solutions</p>
+            <p>Location: Bengaluru</p>
+
+            <button class="btn"
+                onclick="window.location.href='Job-details.html'">
+                View Details
+            </button>
+        </div>
+
+        <hr>
+
+        <h3>Menu</h3>
+
+        <button class="btn" onclick="window.location.href='Saved-jobs.html'">
+            Saved Jobs
+        </button>
+
+        <button class="btn" onclick="window.location.href='my-applications.html'">
+            My Applications
+        </button>
+
+        <button class="btn" onclick="window.location.href='profile.html'">
+            My Profile
+        </button>
+
+        <button class="btn" onclick="logout()">
+            Logout
+        </button>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
