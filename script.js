@@ -39,3 +39,10 @@ function logout() {
         window.location.href = "index.html";
     }
 }
+function applyJob() {
+    alert("Application submitted successfully!");
+}
+
+function saveJob() {
+    alert("Job saved successfully!");
+}
