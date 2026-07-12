@@ -35,7 +35,6 @@
     <button class="btn" onclick="window.location.href='home.html'">
         Back to Home
     </button>
-
 </div>
 
 <script>
@@ -49,14 +48,13 @@ localStorage.getItem("jobCompany") || "ABC Technologies";
 document.getElementById("location").innerHTML =
 localStorage.getItem("jobLocation") || "Hyderabad";
 
-function applyJob(){
+function applyJob() {
     alert("Application submitted successfully!");
 }
 
-function saveJob(){
-
-    let title = localStorage.getItem("jobTitle");
-    let company = localStorage.getItem("jobCompany");
+function saveJob() {
+    let title = document.getElementById("jobTitle").innerText;
+    let company = document.getElementById("company").innerText;
 
     localStorage.setItem("savedJob", title + " - " + company);
 
@@ -66,4 +64,6 @@ function saveJob(){
 </script>
 
 </body>
+</html>
+
 </html>
