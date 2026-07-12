@@ -38,43 +38,39 @@
 
 <script>
 
-let savedJob = localStorage.getItem("savedJob");
+let savedJobs = JSON.parse(localStorage.getItem("savedJobs")) || [];
 
-if(savedJob){
-    document.getElementById("savedJobTitle").innerHTML = savedJob;
+let jobContainer = document.getElementById("savedJobTitle");
+
+if(savedJobs.length > 0){
+
+    jobContainer.innerHTML = "";
+
+    savedJobs.forEach(function(job){
+
+        let p = document.createElement("p");
+        p.innerHTML = job;
+        jobContainer.appendChild(p);
+
+    });
+
 }
 else{
-    document.getElementById("savedJobTitle").innerHTML = "No Saved Jobs";
-}
 
-function viewJob(){
-
-    if(localStorage.getItem("savedJob")){
-        window.location.href="job-details.html";
-    }
-    else{
-        alert("No saved jobs available.");
-    }
+    jobContainer.innerHTML = "No Saved Jobs";
 
 }
+
 
 function removeJob(){
 
-    if(localStorage.getItem("savedJob")){
+    localStorage.removeItem("savedJobs");
 
-        localStorage.removeItem("savedJob");
-        document.getElementById("savedJobTitle").innerHTML="No Saved Jobs";
-        alert("Job removed successfully!");
+    document.getElementById("savedJobTitle").innerHTML = "No Saved Jobs";
 
-    }
-    else{
-
-        alert("No saved jobs to remove.");
-
-    }
+    alert("All saved jobs removed!");
 
 }
-
 </script>
 
 </body>
