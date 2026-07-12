@@ -35,17 +35,22 @@
    <script>
 
 function applyJob(){
-
     alert("Application submitted successfully!");
-
 }
 
 function saveJob(){
 
-    localStorage.setItem("savedJob","Software Developer - ABC Technologies");
+    let jobTitle = document.querySelector("h2").innerText;
+    let company = document.querySelectorAll("p")[0].innerText;
+
+    let savedJob = jobTitle + " - " + company;
+
+    localStorage.setItem("savedJob", savedJob);
+
     alert("Job saved successfully!");
 
 }
+
 
    </script>
    </body>
