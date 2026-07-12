@@ -114,26 +114,27 @@ function analyzeResume(){
 <li>JavaScript</li>
 <li>Python</li>
 </ul>
-⁶<script>
+<script>
 
-function login(){
+function login() {
 
     let username = document.getElementById("username").value;
     let password = document.getElementById("password").value;
 
-    if(username == "admin" && password == "1234"){
+    if (username !== "" && password !== "") {
 
         alert("Login successful!");
+        window.location.href = "home.html";
 
-    }
+    } else {
 
-    else{
-
-        alert("Invalid username or password");
+        alert("Please enter username and password.");
 
     }
 
 }
+
+</script>
 
 </script>
 </body>
