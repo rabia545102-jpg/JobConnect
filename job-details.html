@@ -9,22 +9,27 @@
 <body>
 
 <div class="header">
-    JobConnect
+    <h2>JobConnect</h2>
 </div>
 
 <div class="container">
 
-    <h2>Software Developer</h2>
+    <h2 id="jobTitle"></h2>
 
-    <p><b>Company:</b> ABC Technologies</p>
-    <p><b>Location:</b> Hyderabad</p>
+    <p><b>Company:</b> <span id="company"></span></p>
+    <p><b>Location:</b> <span id="location"></span></p>
     <p><b>Salary:</b> ₹6 LPA</p>
     <p><b>Experience:</b> 0-2 Years</p>
-    <p><b>Description:</b> Looking for a Software Developer with basic knowledge of HTML, CSS and JavaScript.</p>
+    <p><b>Description:</b> Looking for a candidate with basic knowledge of HTML, CSS and JavaScript.</p>
 
-<button class="btn" onclick="applyJob()">Apply Now</button>
+    <button class="btn" onclick="applyJob()">
+        Apply Now
+    </button>
 
-<button class="btn" onclick="saveJob()">Save Job</button>
+    <button class="btn" onclick="saveJob()">
+        Save Job
+    </button>
+
     <br><br>
 
     <button class="btn" onclick="window.location.href='home.html'">
@@ -32,7 +37,17 @@
     </button>
 
 </div>
-   <script>
+
+<script>
+
+document.getElementById("jobTitle").innerHTML =
+localStorage.getItem("jobTitle") || "Software Developer";
+
+document.getElementById("company").innerHTML =
+localStorage.getItem("jobCompany") || "ABC Technologies";
+
+document.getElementById("location").innerHTML =
+localStorage.getItem("jobLocation") || "Hyderabad";
 
 function applyJob(){
     alert("Application submitted successfully!");
@@ -40,18 +55,15 @@ function applyJob(){
 
 function saveJob(){
 
-    let jobTitle = document.querySelector("h2").innerText;
-    let company = document.querySelectorAll("p")[0].innerText;
+    let title = localStorage.getItem("jobTitle");
+    let company = localStorage.getItem("jobCompany");
 
-    let savedJob = jobTitle + " - " + company;
-
-    localStorage.setItem("savedJob", savedJob);
+    localStorage.setItem("savedJob", title + " - " + company);
 
     alert("Job saved successfully!");
-
 }
 
+</script>
 
-   </script>
-   </body>
+</body>
 </html>
